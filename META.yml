@@ -1,10 +1,11 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         Apache2-PageKit
-version:      2.14
-version_from: lib/Apache2/PageKit.pm
-installdirs:  site
-requires:
+--- #YAML:1.0
+name:                Apache2-PageKit
+version:             2.15
+abstract:            ~
+license:             ~
+generated_by:        ExtUtils::MakeMaker version 6.32
+distribution_type:   module
+requires:     
     Apache2::URI:                  0
     Apache2::Util:                 0
     Apache::SessionX:              0
@@ -18,6 +19,8 @@ requires:
     HTML::Template::XPath:         0.1
     mod_perl2:                     2
     XML::LibXML:                   1.53
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.30
+meta-spec:
+    url:     http://module-build.sourceforge.net/META-spec-v1.2.html
+    version: 1.2
+author:
+    - T.J. Mather <tjmather\@thoughtstore.com>

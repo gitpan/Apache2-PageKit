@@ -112,7 +112,7 @@ use Apache2::Const qw(OK DONE REDIRECT DECLINED HTTP_NOT_MODIFIED);
 use APR::Const    -compile => 'SUCCESS';
 
 use vars qw($VERSION);
-$VERSION = '2.14';
+$VERSION = '2.15';
 
 %Apache2::PageKit::DefaultMediaMap = (
 				     pdf => 'application/pdf',
@@ -944,7 +944,7 @@ sub new {
   die "Must specify PerlSetVar PKIT_SERVER in httpd.conf file" unless $server;
   my $config = $self->{config} = Apache2::PageKit::Config->new(config_dir => $config_dir,
                                                               server => $server);
-  my $post_max = $self->{config}->get_global_attr('post_max') || 100_000_000;
+  my $post_max = $self->{config}->get_global_attr('post_max') || 64_000_000;
   my $upload_tmp_dir = $self->{config}->get_global_attr('upload_tmp_dir');
 
   # the TEMP_DIR option is only avail since version 1.0 of libapreq

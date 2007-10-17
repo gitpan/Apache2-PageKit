@@ -1,6 +1,18 @@
 Revision history for Perl extension Apache::PageKit.
 
 	For more details on migration, see migration/README
+2.15	No functional changes to 2.14_15 API compatible to 1.19
+
+1.19
+	! Adjust post_max limit to sync with yet another incompatble 
+		change in libapreq2. The new default limit is 
+		64_000_000 instead of 100_000_000 the current limit
+		in libapreq2 is 64 * 1024 * 1024
+		( Boris Zentner )
+	- Fix: typo in Apache2::PageKit::View::get_static_gzip
+		should improve speed of sending static gzipped files
+		( Shimon Rura )
+
 1.18
 	- Allow testsuit to catch up with Changes in Apache::Test. 
 		POST's can be redirected on the fly. 

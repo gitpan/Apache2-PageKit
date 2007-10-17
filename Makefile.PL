@@ -47,7 +47,6 @@ use vars qw( %h );
     # version is the minimum version required to run
 
     Requirements => {
-	              'mod_perl2'             => { version => 2.000001 },
                       'Apache::Test'          => { version => 1.05 },
                       'Apache::SessionX'      => {},
                       'Compress::Zlib'        => {},
@@ -184,26 +183,6 @@ check_mods( "You need to install the following module(s) to run PageKit:\n", $up
 check_mods( "\nYou should install the following module(s) to run PageKit:\n",  $update, $h{$vers}{Recommended} );
 check_mods( "\nYou need to install the following module(s) to run the PageKit Example Server:\n", $update, $h{$vers}{Example} );
 print "\n";
-print "Do not forget, the right httpd must be in  your PATH\n\n";
-print <<__ROOT__ if ( $< == 0 );
-
-#################################################
-### READ THIS                                 ###
-#################################################
-
-  make test 
-
-  did NOT work as ROOT
-  skip the test suite or retry as NON root user
-
-  perl Makefile.PL
-  make
-  make test
-  sudo make install
-
-#################################################
-
-__ROOT__
 
 # end install_checker
 ###################################

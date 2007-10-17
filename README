@@ -1,10 +1,9 @@
 Apache::PageKit
 ===============
 
-
 Status
 ------
-	Version: 1.18
+	Version: 1.17
 
 Description
 -----------
@@ -40,10 +39,10 @@ Description
 
 Requirements
 ------------
-	- perl 5.008 or greater
-	- mod_perl 2
-	- Apache2
-	- libapreq2 2.06-dev
+	- perl 5.006001 or greater
+	- mod_perl 1.9916
+	- Apache 2
+	- libapreq2
 
 	- Apache::SessionX
 	- Compress::Zlib
@@ -53,7 +52,7 @@ Requirements
 	- HTML::Template 2.2
 	- HTML::Template::XPath
 	- HTML::Clean
-	- Encode
+	- Text::Iconv
         - libxml2 library - download from http://www.xmlsoft.org
 	- XML::LibXML 1.31
 
@@ -80,12 +79,10 @@ Installation
 
 	After installing the requirements, you can use the standard
 
-        ***** DO NOT RUN make test AS ROOT ****
-
 	perl Makefile.PL
 	make
 	make test
-	sudo make install
+	make install
 
 Setting up Included Example PageKit Site
 ----------------------------------------

@@ -211,7 +211,7 @@ sub get_static_gzip {
     open my $fh, "<$gzipped_filename" or return undef;
     binmode $fh;
     # read mtime from first line
-    chomp($gzip_mtime = <FH>);
+    chomp($gzip_mtime = <$fh>);
 
     # read rest of gzipped content
     local $/;
